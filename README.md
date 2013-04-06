@@ -1,4 +1,0 @@
-netcdf
-======
-
-netcdf examples
