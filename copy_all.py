@@ -15,6 +15,11 @@ infile = Dataset(ncfile_in, 'r')
 outfile = Dataset(ncfile_out,mode='w',format='NETCDF3_CLASSIC')
 #first transfer the dimensions
 
+print infile.variables.keys()
+new_temp=infile.variables['T']
+new_temp=new_temp[...]
+
+
 for (name,value) in infile.dimensions.items():
     outfile.createDimension(name,len(value))
 
