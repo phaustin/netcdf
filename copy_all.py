@@ -42,4 +42,14 @@ for (inname,invalue) in infile.variables.items():
     outvar[...]=invalue[...]
 
 infile.close()
+
+transformed_vars=['press','temp','theta']
+
+for the_var in tranformed_vars:
+    the_array=oufile.variables[the_var]
+    the_array[...]=newvars[the_var][...]
+    print type(the_array)
+    
+    
+
 outfile.close()
